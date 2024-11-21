@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoy HAHAHAHA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style26.css">
+</head>
+<body>
+    
+    <div id="confirmation">
+        <p class="question">Pogi ba ako?</p>
+        <button id="yesButton">Yes</button>
+        <button class="noButton">No</button>  
+    </div>
 
+    <footer>
+        <p>Created by Rendel Santos</p>
+    </footer>
+
+    <div id="arrow" class="arrow">
+        👉 
+    </div>
+
+    <script>
+       
+        document.getElementById('yesButton').addEventListener('click', function() {
+            window.location.href = 'luhnagyes.html';
+        });
+
+        function addNoButton() {
+            const noButton = document.createElement('button');
+            noButton.classList.add('noButton');
+            noButton.textContent = 'No';
+            document.body.appendChild(noButton); 
+            
+            const randomTop = Math.random() * (window.innerHeight - 50); 
+            const randomLeft = Math.random() * (window.innerWidth - 150); 
+            noButton.style.position = 'absolute'; 
+            noButton.style.top = `${randomTop}px`;
+            noButton.style.left = `${randomLeft}px`;
+
+            noButton.addEventListener('click', function() {
+                addNoButton();  
+            });
+        }
+
+        document.querySelector('.noButton').addEventListener('click', function() {
+            addNoButton(); 
+
+            startContinuousArrowMovement();
+        });
+
+        function startContinuousArrowMovement() {
+            const arrow = document.getElementById('arrow');
+            const yesButton = document.getElementById('yesButton');
+
+            const yesButtonRect = yesButton.getBoundingClientRect();
+
+            arrow.style.visibility = 'visible'; 
+            arrow.style.position = 'absolute';
+            arrow.style.transition = 'none'; 
+
+            setInterval(() => {
+                
+                const yesButtonRect = yesButton.getBoundingClientRect();
+
+                arrow.style.top = `${yesButtonRect.top + yesButtonRect.height / 2 - 20}px`;
+                arrow.style.left = `${yesButtonRect.left - 40}px`;
+            }, 10);
+        }
+    </script>
+</body>
+</html>
