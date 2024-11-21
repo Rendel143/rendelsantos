@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Content</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style26.css">
+</head>
+<body>
+   
+    <div id="mainContent">
+        <div class="kilig">
+            <img src="https://c.tenor.com/zqm6WMNOXm0AAAAC/peachcute-peachhappy.gif" alt="Happy Peach">
+            <audio controls id="sound">
+                <source src="assets/hanap-hanap.mp3" type="audio/mp3">
+                <source src="assets/hanap-hanap.ogg" type="audio/ogg">
+            </audio>
+            
+            <img src="https://c.tenor.com/s--312__jnoAAAAC/kermit-kermit-love.gif" alt="Kermit Love">
+            
+            <p class="message">Yieee! Bakit nag yes ka? Crush mo siguro ako no? Umin ka na kase!</p>
+            <p class="message">Yieeeh, kinikilig sya hahahaha</p>
+            
+            <img src="images/KILIG.jpg" alt="Kilig Image">
+
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by Rendel Santos</p>
+    </footer>
+
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.querySelector('#sound');
+            
+            audio.play().catch(function(error) {
+                console.error('Error trying to play audio:', error);
+            });
+        });
+    </script>
+</body>
+</html>
