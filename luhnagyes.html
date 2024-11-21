@@ -13,8 +13,9 @@
         <div class="kilig">
             <img src="https://c.tenor.com/zqm6WMNOXm0AAAAC/peachcute-peachhappy.gif" alt="Happy Peach">
             <audio controls id="sound">
-                <source src="assets/hanap-hanap.mp3" type="audio/mp3">
-                <source src="assets/hanap-hanap.ogg" type="audio/ogg">
+                <!-- Update the audio source to raw URL from GitHub -->
+                <source src="https://raw.githubusercontent.com/your-username/your-repository-name/main/assets/hanap-hanap.mp3" type="audio/mp3">
+                <source src="https://raw.githubusercontent.com/your-username/your-repository-name/main/assets/hanap-hanap.ogg" type="audio/ogg">
             </audio>
             
             <img src="https://c.tenor.com/s--312__jnoAAAAC/kermit-kermit-love.gif" alt="Kermit Love">
@@ -22,7 +23,8 @@
             <p class="message">Yieee! Bakit nag yes ka? Crush mo siguro ako no? Umin ka na kase!</p>
             <p class="message">Yieeeh, kinikilig sya hahahaha</p>
             
-            <img src="images/KILIG.jpg" alt="Kilig Image">
+            <!-- Update the image source to raw URL from GitHub -->
+            <img src="https://raw.githubusercontent.com/your-username/your-repository-name/main/images/KILIG.jpg" alt="Kilig Image">
 
         </div>
     </div>
@@ -32,10 +34,10 @@
     </footer>
 
     <script>
-        
         document.addEventListener('DOMContentLoaded', function() {
             const audio = document.querySelector('#sound');
             
+            // Play the audio automatically when the page loads
             audio.play().catch(function(error) {
                 console.error('Error trying to play audio:', error);
             });
