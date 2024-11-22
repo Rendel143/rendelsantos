@@ -59,8 +59,8 @@ button:hover {
 
         #nextButton {
             position: absolute;
-            bottom: -30px; 
-            left: 100%;
+            bottom: -40px; 
+            left: 46%;
             transform: translateX(-50%);
             background-color: blue;
             color: white;
