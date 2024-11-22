@@ -14,16 +14,12 @@
            
             <img src="https://media1.tenor.com/m/lbBPBhgLOYEAAAAd/shame-pysiduck.gif" alt="pysiduck">
 
-            <!-- Audio player container with next button -->
             <div class="audio-container">
                 <audio controls id="sound">
-                    <source src="https://raw.githubusercontent.com/Rendel143/rendelsantos/main/kinikilig.mp3" type="audio/mp3">
                     <source src="https://raw.githubusercontent.com/Rendel143/rendelsantos/main/hanap-hanap.mp3" type="audio/mp3">
-                    <source src="https://raw.githubusercontent.com/Rendel143/rendelsantos/main/kinikilig.ogg" type="audio/ogg">
-                    <source src="https://raw.githubusercontent.com/Rendel143/rendelsantos/main/hanap-hanap.ogg" type="audio/ogg">
+                    <source src="https://raw.githubusercontent.com/Rendel143/rendelsantos/main/kinikilig.mp3" type="audio/mp3">
                 </audio>
                 
-                <!-- Next Song button inside the audio container -->
                 <button id="nextButton">Next Song</button>
             </div>
             
@@ -56,15 +52,13 @@
 
             let currentSongIndex = 0;
 
-            // Set the initial song and play it
             audio.src = songs[currentSongIndex];
             audio.play().catch(function(error) {
                 console.error('Error trying to play audio:', error);
             });
 
-            // Event listener for the Next button
             nextButton.addEventListener('click', function() {
-                currentSongIndex = (currentSongIndex + 1) % songs.length; // Loop back to the first song after the last one
+                currentSongIndex = (currentSongIndex + 1) % songs.length;
                 audio.src = songs[currentSongIndex];
                 audio.play();
             });
