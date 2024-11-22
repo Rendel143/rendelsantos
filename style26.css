@@ -1,3 +1,4 @@
+/* General Body Styling */
 body {
     font-family: 'Roboto', sans-serif;
     background: white; 
@@ -6,76 +7,85 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;  
+    height: 100vh;
     flex-direction: column;
     padding: 20px;
     box-sizing: border-box;
+    overflow: hidden; /* Prevent overflow when zooming */
 }
- 
+
+/* Confirmation Box */
 #confirmation {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 28px;
+    font-size: 1.75rem; /* Using rem for better scalability */
     background-color: rgba(255, 255, 255, 0.9);  
-    padding: 40px;
-    border-radius: 15px;
+    padding: 2.5rem; /* Using rem for better scalability */
+    border-radius: 1rem;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
-    width: 100%;  
-    max-width: 600px;   
+    width: 100%;
+    max-width: 600px;
     box-sizing: border-box;
+    position: relative; /* Ensure proper positioning within container */
 }
- 
+
+/* Question Styling */
 .question {
     font-family: 'Playfair Display', serif; 
     color: black;
-    font-size: 36px;
-    margin-bottom: 30px;
+    font-size: 2.25rem; /* Scalable size */
+    margin-bottom: 2rem; /* Using rem for better responsiveness */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
- 
+
+/* Button Styling */
 button {
-    padding: 12px 30px;
-    font-size: 20px;
-    margin: 15px;
+    padding: 1rem 2rem; /* Using rem for scalability */
+    font-size: 1.25rem; /* Scalable font size */
+    margin: 1rem;
     cursor: pointer;
     border: none;
     border-radius: 30px;
-    background-color: #0d1786;  
+    background-color: #0d1786;
     color: white;
     transition: all 0.3s ease-in-out;
 }
 
 button:hover {
-    background-color:  #0d1786;   
-    transform: scale(1.05);   
-} 
+    background-color: #0d1786;
+    transform: scale(1.05);
+}
+
+/* Audio Container */
 .audio-container {
-            position: flex;
-            display: inline-block;
-        }
+    display: inline-block;
+    position: relative; /* Corrected to ensure proper stacking */
+}
 
-        #nextButton {
-            position: absolute;
-            bottom: -30px; 
-            left: 49%;
-            transform: translateX(-50%);
-            background-color: blue;
-            color: white;
-            border: none;
-            padding: 10px 25px;
-            cursor: pointer;
-            border-radius: 30px;
-            font-size: 14px;
-            z-index: 9999;
-        }
+/* Next Button */
+#nextButton {
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem; /* Scalable padding */
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 1rem; /* Scalable font size */
+    z-index: 9999;
+}
 
-        #nextButton:hover {
-            background-color: blue;
-        }
+#nextButton:hover {
+    background-color: blue;
+}
 
+/* Kilig Section */
 .kilig {
     display: flex;
     flex-direction: column;
@@ -83,84 +93,88 @@ button:hover {
     justify-content: center;
     font-family: 'Playfair Display', serif;
     text-align: center;
-    padding: 20px;
+    padding: 2rem;
     width: 100%;
     box-sizing: border-box;
 }
 
 .kilig img {
     width: 100%;
-    max-width: 200px; 
+    max-width: 12.5rem; /* Scalable max-width */
     height: auto;
-    margin: 20px;
-    border-radius: 15px;
+    margin: 1.25rem; /* Scalable margin */
+    border-radius: 1rem;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-
+/* Message Section */
 .message {
-    font-size: 20px;
-    color: black;  
+    font-size: 1.25rem; /* Scalable font size */
+    color: black;
     font-family: 'Playfair Display', serif;
     font-weight: bold;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-    margin-bottom: 20px;
-    padding-bottom: 20px; 
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem; /* Adjusted for scalability */
 }
 
+/* Footer */
 footer {
-    margin-top: 30px;
-    font-size: 10px;
+    margin-top: 2rem;
+    font-size: 0.625rem; /* Scalable font size */
     color: #000000;
     font-family: 'Playfair Display', serif;
     text-align: center;
 }
 
+/* Media Queries for Mobile */
 @media (max-width: 600px) {
     .question {
-        font-size: 28px;
+        font-size: 1.75rem;
     }
 
     .kilig img {
-        max-width: 150px; 
+        max-width: 10rem; /* Responsive image size */
     }
 
     .message {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
     button {
-        font-size: 18px;
-        padding: 10px 25px;
+        font-size: 1.125rem; /* Slightly smaller font size for mobile */
+        padding: 0.75rem 1.5rem; /* Adjusted padding */
     }
 
     footer {
-        font-size: 10px;
+        font-size: 0.625rem;
     }
 }
 
+/* Arrow Styling */
 .arrow {
-    font-size: 50px;
+    font-size: 3.125rem; /* Scalable font size */
     position: absolute;
     z-index: 1000;
     visibility: hidden;
-    transition: all 2s ease; 
+    transition: all 2s ease;
 }
 
+/* No Button Styling */
 .noButton {
-    padding: 12px 30px;
-    font-size: 20px;
-    margin: 15px;
+    padding: 1rem 2rem; /* Scalable padding */
+    font-size: 1.25rem; /* Scalable font size */
+    margin: 1rem;
     cursor: pointer;
     border: none;
     border-radius: 30px;
-    background-color: #d90a0a; 
+    background-color: #d90a0a;
     color: white;
     transition: all 0.3s ease-in-out;
     z-index: 1000;
 }
 
 .noButton:hover {
-    background-color: #ff7d85;  
-    transform: scale(1.05); 
+    background-color: #ff7d85;
+    transform: scale(1.05);
 }
