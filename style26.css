@@ -67,10 +67,8 @@ button:hover {
 
 /* Next Button */
 #nextButton {
-    position: absolute;
-    bottom: -2rem;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative; /* Changed from absolute to relative for better flow */
+    margin-top: 2rem; /* Added space between the button and content */
     background-color: blue;
     color: white;
     border: none;
