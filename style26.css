@@ -55,6 +55,7 @@ button:hover {
 .audio-container {
             position: fixed;
             display: inline-block;
+            align-items: left;
         }
 
         #nextButton {
