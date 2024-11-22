@@ -52,10 +52,9 @@ button:hover {
     background-color:  #0d1786;   
     transform: scale(1.05);   
 } 
-footer.audio-container {
-            position: fixed;
+.audio-container {
+            position: flex;
             display: inline-block;
-            align-items: left;
         }
 
         #nextButton {
