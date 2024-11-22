@@ -52,19 +52,29 @@ button:hover {
     background-color:  #0d1786;   
     transform: scale(1.05);   
 } 
-audio {
-    margin: 20px 0;  
-    border-radius: 10px;
-    border: none;
-    width: 100%; 
-    max-width: 400px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);  
-    position: absolute;  
-    left: 50%;  
-    transform: translateX(-50%); 
-    bottom: 20px; 
-    z-index: 9999; 
-}
+.audio-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        #nextButton {
+            position: absolute;
+            bottom: -40px; 
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ff7f50;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            cursor: pointer;
+            border-radius: 30px;
+            font-size: 18px;
+            z-index: 9999;
+        }
+
+        #nextButton:hover {
+            background-color: #ff6347;
+        }
 
 .kilig {
     display: flex;
