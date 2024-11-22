@@ -1,3 +1,4 @@
+/* General Body Styling */
 body {
     font-family: 'Roboto', sans-serif;
     background: white; 
@@ -6,42 +7,45 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;  
+    height: 100vh;
     flex-direction: column;
     padding: 20px;
     box-sizing: border-box;
-    overflow: hidden; 
+    overflow: hidden; /* Prevent overflow when zooming */
 }
 
+/* Confirmation Box */
 #confirmation {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 1.75rem; 
+    font-size: 1.75rem; /* Using rem for better scalability */
     background-color: rgba(255, 255, 255, 0.9);  
-    padding: 2.5rem; 
+    padding: 2.5rem; /* Using rem for better scalability */
     border-radius: 1rem;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 600px;
     box-sizing: border-box;
-    position: relative;
-    margin-bottom: 3rem;  
+    position: relative; /* Ensure proper positioning within container */
+    margin-bottom: 5rem; /* Added margin at the bottom to avoid overlap */
 }
 
+/* Question Styling */
 .question {
     font-family: 'Playfair Display', serif; 
     color: black;
-    font-size: 2.25rem; 
-    margin-bottom: 2rem;
+    font-size: 2.25rem; /* Scalable size */
+    margin-bottom: 2rem; /* Using rem for better responsiveness */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Button Styling */
 button {
-    padding: 1rem 2rem;
-    font-size: 1.25rem;
+    padding: 1rem 2rem; /* Using rem for scalability */
+    font-size: 1.25rem; /* Scalable font size */
     margin: 1rem;
     cursor: pointer;
     border: none;
@@ -56,21 +60,23 @@ button:hover {
     transform: scale(1.05);
 }
 
+/* Audio Container */
 .audio-container {
     display: inline-block;
-    position: relative;
+    position: relative; /* Corrected to ensure proper stacking */
 }
 
+/* Next Button */
 #nextButton {
-    position: relative; 
-    margin-top: 2rem;  
+    position: relative; /* Changed from absolute to relative for better flow */
+    margin-top: 2rem; /* Added space between the button and content */
     background-color: blue;
     color: white;
     border: none;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1.5rem; /* Scalable padding */
     cursor: pointer;
     border-radius: 30px;
-    font-size: 1rem;
+    font-size: 1rem; /* Scalable font size */
     z-index: 9999;
 }
 
@@ -78,6 +84,7 @@ button:hover {
     background-color: blue;
 }
 
+/* Kilig Section */
 .kilig {
     display: flex;
     flex-direction: column;
@@ -92,38 +99,41 @@ button:hover {
 
 .kilig img {
     width: 100%;
-    max-width: 12.5rem;
+    max-width: 12.5rem; /* Scalable max-width */
     height: auto;
-    margin: 1.25rem;
+    margin: 1.25rem; /* Scalable margin */
     border-radius: 1rem;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Message Section */
 .message {
-    font-size: 1.25rem;
+    font-size: 1.25rem; /* Scalable font size */
     color: black;
     font-family: 'Playfair Display', serif;
     font-weight: bold;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
     margin-bottom: 1.25rem;
-    padding-bottom: 1.25rem;
+    padding-bottom: 1.25rem; /* Adjusted for scalability */
 }
 
+/* Footer */
 footer {
     margin-top: 2rem;
-    font-size: 0.625rem;
+    font-size: 0.625rem; /* Scalable font size */
     color: #000000;
     font-family: 'Playfair Display', serif;
     text-align: center;
 }
 
+/* Media Queries for Mobile */
 @media (max-width: 600px) {
     .question {
         font-size: 1.75rem;
     }
 
     .kilig img {
-        max-width: 10rem;
+        max-width: 10rem; /* Responsive image size */
     }
 
     .message {
@@ -131,8 +141,8 @@ footer {
     }
 
     button {
-        font-size: 1.125rem;
-        padding: 0.75rem 1.5rem;
+        font-size: 1.125rem; /* Slightly smaller font size for mobile */
+        padding: 0.75rem 1.5rem; /* Adjusted padding */
     }
 
     footer {
@@ -140,17 +150,19 @@ footer {
     }
 }
 
+/* Arrow Styling */
 .arrow {
-    font-size: 3.125rem;
+    font-size: 3.125rem; /* Scalable font size */
     position: absolute;
     z-index: 1000;
     visibility: hidden;
     transition: all 2s ease;
 }
 
+/* No Button Styling */
 .noButton {
-    padding: 1rem 2rem;
-    font-size: 1.25rem;
+    padding: 1rem 2rem; /* Scalable padding */
+    font-size: 1.25rem; /* Scalable font size */
     margin: 1rem;
     cursor: pointer;
     border: none;
