@@ -5,6 +5,7 @@ body {
     margin: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 100vh;  
     flex-direction: column;
     padding: 20px;
@@ -51,7 +52,7 @@ button:hover {
     background-color:  #0d1786;   
     transform: scale(1.05);   
 } 
-.audio-container {
+footer.audio-container {
             position: fixed;
             display: inline-block;
             align-items: left;
