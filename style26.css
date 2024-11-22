@@ -53,7 +53,7 @@ button:hover {
     transform: scale(1.05);   
 } 
 .audio-container {
-            position: relative;
+            position: fixed;
             display: inline-block;
         }
 
