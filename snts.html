@@ -15,7 +15,6 @@
             <img src="https://media1.tenor.com/m/lbBPBhgLOYEAAAAd/shame-pysiduck.gif" alt="pysiduck">
 
             <audio controls id="sound">
-                
                 <source src="https://raw.githubusercontent.com/Rendel143/rendelsantos/main/kinikilig.mp3" type="audio/mp3">
                 <source src="https://raw.githubusercontent.com/Rendel143/rendelsantos/main/hanap-hanap.mp3" type="audio/mp3">
                 <source src="https://raw.githubusercontent.com/Rendel143/rendelsantos/main/kinikilig.ogg" type="audio/ogg">
@@ -26,13 +25,14 @@
             
             <p class="message">ano pa hinihintay mo? chat mo nako! hahahahaha</p> 
             <p class="message">
-  <a href="https://www.facebook.com/profile.php?id=100084141694739&mibextid=ZbWKwL" target="_blank">
-    https://www.facebook.com/profile.php?id=100084141694739&mibextid=ZbWKwL
-  </a>
-</p>
+                <a href="https://www.facebook.com/profile.php?id=100084141694739&mibextid=ZbWKwL" target="_blank">
+                    https://www.facebook.com/profile.php?id=100084141694739&mibextid=ZbWKwL
+                </a>
+            </p>
             
             <img src="https://raw.githubusercontent.com/Rendel143/rendelsantos/main/KILIG.jpg" alt="Kilig Image">
-
+            
+            <button id="nextButton">Next Song</button>
         </div>
     </div>
 
@@ -43,9 +43,24 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const audio = document.querySelector('#sound');
-            
+            const nextButton = document.querySelector('#nextButton');
+
+            const songs = [
+                "https://raw.githubusercontent.com/Rendel143/rendelsantos/main/kinikilig.mp3",
+                "https://raw.githubusercontent.com/Rendel143/rendelsantos/main/hanap-hanap.mp3"
+            ];
+
+            let currentSongIndex = 0;
+
+            audio.src = songs[currentSongIndex];
             audio.play().catch(function(error) {
                 console.error('Error trying to play audio:', error);
+            });
+
+            nextButton.addEventListener('click', function() {
+                currentSongIndex = (currentSongIndex + 1) % songs.length;
+                audio.src = songs[currentSongIndex];
+                audio.play();
             });
         });
     </script>
