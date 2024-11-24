@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker - Dashboard</title>
+  <link rel="stylesheet" href="styles/globaldashboard.css">
+  <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="logo">💸 Expense Tracker</div>
+      <ul class="bottom-nav">
+        <li><a href="#expenses" class="active"><i class="icon-expenses"></i>Expenses</a></li>
+        <li><a href="#summary"><i class="icon-summary"></i>Summary</a></li>
+        <li><a href="#settings"><i class="icon-settings"></i>Settings</a></li>
+      </ul>
+      
+    </nav>
+
+    <!-- Add Expense Section -->
+    <main>
+      <div class="expense-form">
+        <h2>Add New Expense</h2>
+        <div class="input-group">
+          <input type="number" id="amount" placeholder="Amount" required>
+        </div>
+        <div class="input-group">
+          <select id="category">
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <input type="text" id="description" placeholder="Description">
+        </div>
+        <div class="input-group">
+          <input type="date" id="date" required>
+        </div>
+        <button id="add-expense">Add Expense</button>
+      </div>
+      <!-- Expense List Section -->
+      <div class="expense-list">
+        <h2>Expenses</h2>
+        <ul id="expense-list">
+          <!-- Dynamically added expenses -->
+        </ul>
+      </div>
+
+      <!-- Summary Section -->
+      <div class="summary">
+        <h2>Total: $<span id="total">0.00</span></h2>
+        <canvas id="expense-chart"></canvas>
+      </div>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="scripts/expense.js"></script>
+  <script src="scripts/chart.js"></script>
+  <!-- Add the Chart.js library from a CDN -->
+
+
+</body>
+</html>
